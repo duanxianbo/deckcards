@@ -5,6 +5,7 @@ import {colorTypeMap} from '../config';
 import theme from '../theme';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import Zoom from '@material-ui/core/Zoom';
 const {palette, shadows, shape} = theme;
 
 const cardIconSylte = {
@@ -30,13 +31,15 @@ const styles = {
 
 function Card({element, classes}) {
   return (
-    <Grid container alignItems={'center'} className={classes.cardContainer}>
-      <Grid item container justify={'center'}>
-        <Typography variant="subtitle2" color="inherit" noWrap>
-          {element}
-        </Typography>
+    <Zoom in={true}>
+      <Grid container alignItems={'center'} className={classes.cardContainer}>
+        <Grid item container justify={'center'}>
+          <Typography variant="subtitle2" color="inherit" noWrap>
+            {element}
+          </Typography>
+        </Grid>
       </Grid>
-    </Grid>
+    </Zoom>
   );
 }
 
