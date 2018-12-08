@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import store from './store';
-import {CardsContainer} from './cards';
+import App from './App';
 
 function Index() {
-  return <Provider store={store}><CardsContainer/></Provider>;
+  return <Provider store={store}><App/></Provider>;
 }
 
 ReactDOM.render(<Index />, document.getElementById('index'));

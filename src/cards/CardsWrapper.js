@@ -5,13 +5,16 @@ import injectSheet from 'react-jss';
 
 const styles = {
   container: {
-    display: 'flex'
+    display: 'flex',
+    flexWrap: 'wrap'
   },
   cardsFolder: {
     display: 'flex',
     flexBasis: '50%',
     flexShrink: 0,
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    flex: 1,
+    minWidth: '300px'
   }
 };
 
@@ -29,7 +32,7 @@ function CardsWrapper({cardsDeck, cardsDealed, dealOneCardAction, shuffleAction,
         <CardsFolder
           cards={cardsDealed}
           cardAction={dealOneCardAction}
-          actionLabel={'dealOneCardAction'}
+          actionLabel={'deal one card'}
           id="cardsDealed"/>
       </div>
     </div>
