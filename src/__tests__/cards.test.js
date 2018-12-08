@@ -1,6 +1,6 @@
 import React from 'react';
 import {render, mount} from 'enzyme';
-import {Card, Cards, CardsFolder, _CardsContainer} from '../cards';
+import {Card, Cards, CardsFolder, CardsWrapper} from '../cards';
 
 const cards = [{
   id: 1,
@@ -49,7 +49,7 @@ describe('Cards actions', () => {
     const shuffle = jest.fn();
 
     const component = mount(
-      <_CardsContainer
+      <CardsWrapper
         cardsDeck={cards.slice(0, 1)}
         cardsDealed={cards.slice(1)}
         dealOneCardAction={dealOneCardAction}
