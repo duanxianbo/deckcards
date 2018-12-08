@@ -1,22 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {CardsContainer} from './cards';
-import injectSheet from 'react-jss';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column'
-  }
-};
-
-
-function App({classes}) {
+function App() {
   return (
-    <div className={classes.container}>
+    <Grid direction={'column'} spacing={16} container>
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" color="inherit" noWrap>
@@ -25,7 +17,7 @@ function App({classes}) {
         </Toolbar>
       </AppBar>
       <CardsContainer/>
-    </div>
+    </Grid>
   );
 }
 
@@ -34,4 +26,4 @@ App.propTypes = {
   classes: PropTypes.object
 };
 
-export default injectSheet(styles)(App);
+export default (App);

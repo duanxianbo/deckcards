@@ -1,41 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CardsFolder from './CardsFolder';
-import injectSheet from 'react-jss';
+import Grid from '@material-ui/core/Grid';
 
-const styles = {
-  container: {
-    display: 'flex',
-    flexWrap: 'wrap'
-  },
-  cardsFolder: {
-    display: 'flex',
-    flexBasis: '50%',
-    flexShrink: 0,
-    flexWrap: 'wrap',
-    flex: 1,
-    minWidth: '300px'
-  }
-};
-
-function CardsWrapper({cardsDeck, cardsDealed, dealOneCardAction, shuffleAction, classes}) {
+function CardsWrapper({cardsDeck, cardsDealed, dealOneCardAction, shuffleAction}) {
   return (
-    <div className={classes.container}>
-      <div className={classes.cardsFolder}>
+    <Grid item container spacing={32}>
+      <Grid
+        item container
+        xs={12}
+        lg={6}>
         <CardsFolder
           cards={cardsDeck}
           cardAction={shuffleAction}
           actionLabel={'shuffle'}
           id="cardsDeck"/>
-      </div>
-      <div className={classes.cardsFolder}>
+      </Grid>
+      <Grid
+        item
+        container
+        xs={12}
+        lg={6}>
         <CardsFolder
           cards={cardsDealed}
           cardAction={dealOneCardAction}
           actionLabel={'deal one card'}
           id="cardsDealed"/>
-      </div>
-    </div>
+      </Grid>
+    </Grid>
   );
 }
 
@@ -48,4 +40,4 @@ CardsWrapper.propTypes = {
   classes: PropTypes.object
 };
 
-export default injectSheet(styles)(CardsWrapper);
+export default (CardsWrapper);

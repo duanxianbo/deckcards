@@ -21,7 +21,8 @@ const styles = {
     '&:before': {...cardIconSylte, top: 2, left: 2},
     '&:after': {...cardIconSylte, bottom: 2, right: 2},
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginBottom: 10
   },
   cardContent: {
     flex: 1,
