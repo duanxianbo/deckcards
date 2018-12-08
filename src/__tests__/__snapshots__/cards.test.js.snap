@@ -3,30 +3,42 @@
 exports[`Cards basic should render cards 1`] = `
 Array [
   <div
-    class="Card-cardContainer-0-1-1 Card-cardContainer-0-1-4"
+    class="MuiGrid-container-1 MuiGrid-align-items-xs-center-9 Card-cardContainer-0-1-1 Card-cardContainer-0-1-3"
   >
     <div
-      class="Card-cardContent-0-1-2"
+      class="MuiGrid-container-1 MuiGrid-item-2 MuiGrid-justify-xs-center-18"
     >
-      A
+      <h6
+        class="MuiTypography-root-98 MuiTypography-subtitle2-117 MuiTypography-colorInherit-127 MuiTypography-noWrap-124"
+      >
+        A
+      </h6>
     </div>
   </div>,
   <div
-    class="Card-cardContainer-0-1-1 Card-cardContainer-0-1-5"
+    class="MuiGrid-container-1 MuiGrid-align-items-xs-center-9 Card-cardContainer-0-1-1 Card-cardContainer-0-1-4"
   >
     <div
-      class="Card-cardContent-0-1-2"
+      class="MuiGrid-container-1 MuiGrid-item-2 MuiGrid-justify-xs-center-18"
     >
-      1
+      <h6
+        class="MuiTypography-root-98 MuiTypography-subtitle2-117 MuiTypography-colorInherit-127 MuiTypography-noWrap-124"
+      >
+        1
+      </h6>
     </div>
   </div>,
   <div
-    class="Card-cardContainer-0-1-1 Card-cardContainer-0-1-6"
+    class="MuiGrid-container-1 MuiGrid-align-items-xs-center-9 Card-cardContainer-0-1-1 Card-cardContainer-0-1-5"
   >
     <div
-      class="Card-cardContent-0-1-2"
+      class="MuiGrid-container-1 MuiGrid-item-2 MuiGrid-justify-xs-center-18"
     >
-      4
+      <h6
+        class="MuiTypography-root-98 MuiTypography-subtitle2-117 MuiTypography-colorInherit-127 MuiTypography-noWrap-124"
+      >
+        4
+      </h6>
     </div>
   </div>,
 ]
@@ -34,12 +46,16 @@ Array [
 
 exports[`Cards basic should render correctly one card 1`] = `
 <div
-  class="Card-cardContainer-0-1-1 Card-cardContainer-0-1-3"
+  class="MuiGrid-container-1 MuiGrid-align-items-xs-center-9 Card-cardContainer-0-1-1 Card-cardContainer-0-1-2"
 >
   <div
-    class="Card-cardContent-0-1-2"
+    class="MuiGrid-container-1 MuiGrid-item-2 MuiGrid-justify-xs-center-18"
   >
-    A
+    <h6
+      class="MuiTypography-root-98 MuiTypography-subtitle2-117 MuiTypography-colorInherit-127 MuiTypography-noWrap-124"
+    >
+      A
+    </h6>
   </div>
 </div>
 `;

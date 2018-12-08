@@ -9,10 +9,6 @@ const styles = {
   cardsList: {
     justifyContent: ({cards}) => cards.length === 0 && 'center',
     alignItems: ({cards}) => cards.length === 0 && 'center'
-  },
-  actionButton: {
-    height: 36,
-    width: 250
   }
 };
 
@@ -24,7 +20,11 @@ function CardsFolder({cards, cardAction, actionLabel, classes}) {
       spacing={32}
       direction={'column'}>
       <Grid item container justify={'center'}>
-        <Button className={classes.actionButton} onClick={cardAction}>{actionLabel}</Button>
+        <Button
+          variant="outlined"
+          color="secondary"
+          className={classes.actionButton}
+          onClick={cardAction}>{actionLabel}</Button>
       </Grid>
       <Grid item container className={classes.cardsList}>
         <Cards cards={cards}/>

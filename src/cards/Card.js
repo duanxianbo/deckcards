@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import injectSheet from 'react-jss';
 import {colorTypeMap} from '../config';
+import theme from '../theme';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+const {palette, shadows, shape} = theme;
 
 const cardIconSylte = {
   color: ({type}) => colorTypeMap[type],
@@ -15,27 +19,24 @@ const styles = {
     position: 'relative',
     width: 50,
     height: 70,
-    borderRadius: '10px',
-    background: '#fff',
-    boxShadow: '3px 3px 7px rgba(0,0,0,0.3)',
+    borderRadius: shape.borderRadius,
+    background: palette.white,
+    boxShadow: shadows[8],
     '&:before': {...cardIconSylte, top: 2, left: 2},
     '&:after': {...cardIconSylte, bottom: 2, right: 2},
-    display: 'flex',
-    alignItems: 'center',
     marginBottom: 10
-  },
-  cardContent: {
-    flex: 1,
-    textAlign: 'center',
-    font: 'Georgia, Times New Roman, serif'
   }
 };
 
 function Card({element, classes}) {
   return (
-    <div className={classes.cardContainer}>
-      <div className={classes.cardContent}>{element}</div>
-    </div>
+    <Grid container alignItems={'center'} className={classes.cardContainer}>
+      <Grid item container justify={'center'}>
+        <Typography variant="subtitle2" color="inherit" noWrap>
+          {element}
+        </Typography>
+      </Grid>
+    </Grid>
   );
 }
 
