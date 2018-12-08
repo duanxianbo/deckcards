@@ -6,8 +6,8 @@
   "scripts": {
     "test": "jest",
     "test:debug": "node --inspect-brk node_modules/.bin/jest --watch --runInBand",
-    "start:build": "node server.js",
-    "start": "webpack-dev-server --mode development --open",
+    "start": "node server.js",
+    "start:dev": "webpack-dev-server --mode development --open",
     "build": "NODE_ENV=production webpack --mode production"
   },
   "devDependencies": {
