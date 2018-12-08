@@ -4,14 +4,8 @@ const htmlPlugin = new HtmlWebPackPlugin({
   template: './src/index.html',
   filename: './index.html'
 });
-const MinifyPlugin = require('babel-minify-webpack-plugin');
 
 module.exports = { // eslint-disable-line
-  optimization: {
-    minimizer: [
-      new MinifyPlugin()
-    ]
-  },
   module: {
     rules: [
       {
